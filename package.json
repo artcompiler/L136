@@ -1,13 +1,13 @@
 {
-  "name": "@graffiticode/l0",
+  "name": "@graffiticode/l136",
   "version": "0.0.1",
   "description": "Compiler as a service.",
-  "author": "Art Compiler LLC",
+  "author": "Artcompiler Inc",
   "license": "MIT",
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/graffiticode/L0"
+    "url": "https://github.com/graffiticode/L136"
   },
   "type": "module",
   "dependencies": {

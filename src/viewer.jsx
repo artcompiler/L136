@@ -39,7 +39,7 @@ class Viewer extends BasisViewer {
 
       root.each(d => d.current = d);
 
-      const svg = d3.select('#form-view').append("svg")
+      const svg = d3.select('#graff-view').append("svg")
             .attr("viewBox", [0, 0, width, width])
             .style("font", "10px sans-serif");
 

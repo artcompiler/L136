@@ -1,9 +1,7 @@
 import * as React from 'react';
 import * as d3 from 'd3';
-//import {Viewer as BasisViewer} from '@graffiticode/basis/src/viewer.jsx';
-import {Viewer as BasisViewer} from '../../../../work/graffiticode/basis/src/viewer.jsx';
 import './style.css';
-class Viewer extends BasisViewer {
+class Viewer extends React.Component {
   componentDidMount() {
     d3.select('#graff-view').append('div').classed('done-rendering', true);
     this.renderSunburst(data);

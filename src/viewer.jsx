@@ -6,6 +6,7 @@ import './style.css';
 class Viewer extends BasisViewer {
   componentDidMount() {
     d3.select('#graff-view').append('div').classed('done-rendering', true);
+    this.renderSunburst(data);
   }
 
   renderSunburst(data) {
@@ -141,11 +142,8 @@ class Viewer extends BasisViewer {
     return elts;
   }
   render() {
-    const props = this.props;
-    //    const data = props.obj && [].concat(props.obj) || [];
-    const elts = this.renderSunburst(data);  
     return (
-      <div>{elts}</div>
+      <div id='graff-view' />
     );
   }
 };

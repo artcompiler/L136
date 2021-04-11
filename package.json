@@ -12,6 +12,7 @@
   "type": "module",
   "dependencies": {
     "@google-cloud/opentelemetry-cloud-trace-exporter": "^0.7.0",
+    "@graffiticode/basis": "^1.0.9",
     "@opentelemetry/api": "^0.13.0",
     "@opentelemetry/core": "^0.13.0",
     "@opentelemetry/metrics": "^0.13.0",
@@ -38,7 +39,6 @@
     "@babel/plugin-transform-runtime": "^7.13.10",
     "@babel/preset-env": "^7.13.12",
     "@babel/preset-react": "^7.13.13",
-    "@graffiticode/basis": "^1.0.9",
     "@pollyjs/adapter-node-http": "^2.7.0",
     "@pollyjs/core": "^2.6.3",
     "@pollyjs/persister-fs": "^2.6.3",

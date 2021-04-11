@@ -67,8 +67,8 @@
     "webpack-cli": "^4.6.0"
   },
   "scripts": {
-    "build": "npx webpack --config configs/webpack.config.js --mode production",
-    "build:dev": "npx webpack --config configs/webpack.config.js --mode development",
+    "build": "npx webpack --config configs/webpack.config.js --mode production; cp src/style.css dist",
+    "build:dev": "npx webpack --config configs/webpack.config.js --mode development; cp src/style.css dist",
     "start": "node app.js",
     "test": "jest --config configs/jest.config.js",
     "watch": "nodemon -w src -w app.js -w package.json --exec make",

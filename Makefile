@@ -1,6 +1,6 @@
 
 
-default: start
+default: build start
 
 build:
 	npm run build

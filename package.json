@@ -69,7 +69,7 @@
   "scripts": {
     "build": "npx webpack --config configs/webpack.config.js --mode production",
     "build:dev": "npx webpack --config configs/webpack.config.js --mode development",
-    "start": "npm run build:dev && node app.js",
+    "start": "npm run build && node app.js",
     "test": "jest --config configs/jest.config.js",
     "watch": "nodemon -w src -w app.js -w package.json --exec make",
     "lambda:zip": "zip -r function.zip . -x=.git/*",

@@ -40,6 +40,7 @@ class Viewer extends React.Component {
 
       const svg = d3.select('#chart').append("svg")
             .attr("viewBox", [0, 0, width, width])
+            .attr("width", width)
             .style("font", "10px sans-serif");
 
       const g = svg.append("g")
@@ -141,7 +142,7 @@ class Viewer extends React.Component {
   }
   render() {
     return (
-      <div className='container w-2/5'>
+      <div className='container'>
         <div id='chart' />
       </div>
     );

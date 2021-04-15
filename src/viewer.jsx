@@ -8,6 +8,7 @@ class Viewer extends React.Component {
   }
 
   componentDidUpdate() {
+    d3.selectAll("#chart > svg").remove();
     this.renderChart();
   }
 

@@ -4,8 +4,24 @@ import './style.css';
 class Viewer extends React.Component {
   componentDidMount() {
     d3.select('#graff-view').append('div').classed('done-rendering', true);
-    const data = {"name": "root", "children": this.props.obj};
-    this.renderSunburst(data);
+    this.componentDidUpdate();
+  }
+
+  componentDidUpdate() {
+    this.renderChart();
+  }
+
+  renderChart() {
+    const data = this.props.obj.data || this.props.obj;
+    const type = this.props.obj.type || 'sunburst';
+    const root = {"name": "root", "children": data};
+    switch (type) {
+    case 'sunburst':
+      this.renderSunburst(root);
+      break;
+    default:
+      break;
+    }
   }
 
   renderSunburst(data) {
@@ -33,7 +49,7 @@ class Viewer extends React.Component {
           .padRadius(radius * 1.5)
           .innerRadius(d => d.y0 * radius)
           .outerRadius(d => Math.max(d.y0 * radius, d.y1 * radius - 1));
-    
+
     const chart = () => {
       const root = partition(data);
 
@@ -113,7 +129,7 @@ class Viewer extends React.Component {
           .attr("fill-opacity", d => +labelVisible(d.target))
           .attrTween("transform", d => () => labelTransform(d.current));
       }
-      
+
       function arcVisible(d) {
         return d.y1 <= 3 && d.y0 >= 1 && d.x1 > d.x0;
       }
@@ -130,10 +146,10 @@ class Viewer extends React.Component {
 
       return svg.node();
     }
-    
+
     chart();
   }
-  
+
   renderElements(data) {
     const elts = [];
     data.forEach(d => {
